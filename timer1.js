@@ -3,7 +3,7 @@ let setAlarms = args.slice(2);
 
 const timer = function(setAlarms) {
   for (let i = 0; i < setAlarms.length; i++) {
-    if (setAlarms[i] < 0) {
+    if (setAlarms[i] < 0 || (isNaN(Number(setAlarms[i])))) {
       continue;
     } else {
       setTimeout(() => {
